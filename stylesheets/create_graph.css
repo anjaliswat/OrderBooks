@@ -1,0 +1,20 @@
+#graphs div{
+  display: inline-block;
+}
+
+#bidsGraph {
+  width: 600px;
+  padding: 30px;
+}
+
+#asksGraph {
+  width: 600px;
+  padding: 30px;
+}
+
+.dropdown {
+    margin-top: 50px;
+    height: 5px;
+    margin-bottom: 150px;
+    margin-left: 670px;
+}

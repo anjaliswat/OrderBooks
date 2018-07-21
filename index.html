@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <link href="stylesheets/c3.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/create_graph.css" rel="stylesheet" type="text/css">
+    <script src="javascript/d3.min.js" charset="UTF-8"></script>
+    <script src="javascript/c3.min.js"></script>
+    <script src="http://localhost:5002/server"> </script>
+  </head>
+  <body>
+    <div class="dropdown">
+      <select id = "exchange_symbols" onchange = "selectSymbol()">
+           <option value = "None"> </option>
+           <option value = "BCH/BTC">BCH/BTC</option>
+           <option value = "BCH/EUR">BCH/EUR</option>
+           <option value = "BCH/USD">BCH/USD</option>
+           <option value = "BTC/CAD">BTC/CAD</option>
+           <option value = "BTC/EUR">BTC/EUR</option>
+           <option value = "BTC/GBP">BTC/GBP</option>
+           <option value = "BTC/JPY">BTC/JPY</option>
+           <option value = "BTC/USD">BTC/USD</option>
+           <option value = "DASH/BTC">DASH/BTC</option>
+           <option value = "DASH/EUR">DASH/EUR</option>
+           <option value = "DASH/USD">DASH/USD</option>
+           <option value = "EOS/BTC">EOS/BTC</option>
+           <option value = "EOS/ETH">EOS/ETH</option>
+           <option value = "EOS/EUR">EOS/EUR</option>
+           <option value = "EOS/USD">EOS/USD</option>
+           <option value = "ETC/BTC">ETC/BTC</option>
+           <option value = "ETC/ETH">ETC/ETH</option>
+           <option value = "ETC/EUR">ETC/EUR</option>
+           <option value = "ETC/USD">ETC/USD</option>
+           <option value = "ETH/BTC">ETH/BTC</option>
+           <option value = "ETH/CAD">ETH/CAD</option>
+           <option value = "ETH/EUR">ETH/EUR</option>
+           <option value = "ETH/GBP">ETH/GBP</option>
+           <option value = "ETH/JPY">ETH/JPY</option>
+           <option value = "ETH/USD">ETH/USD</option>
+           <option value = "GNO/BTC">GNO/BTC</option>
+           <option value = "GNO/ETH">GNO/ETH</option>
+           <option value = "GNO/EUR">GNO/EUR</option>
+           <option value = "GNO/USD">GNO/USD</option>
+           <option value = "ICN/BTC">ICN/BTC</option>
+           <option value = "ICN/ETH">ICN/ETH</option>
+           <option value = "LTC/BTC">LTC/BTC</option>
+           <option value = "LTC/EUR">LTC/EUR</option>
+           <option value = "LTC/USD">LTC/USD</option>
+           <option value = "MLN/BTC">MLN/BTC</option>
+           <option value = "XMR/USD">XMR/USD</option>
+           <option value = "XRP/EUR">XRP/EUR</option>
+           <option value = "XRP/JPY">XRP/JPY</option>
+           <option value = "XRP/USD">XRP/USD</option>
+           <option value = "ZEC/BTC">ZEC/BTC</option>
+           <option value = "ZEC/EUR">ZEC/EUR</option>
+           <option value = "ZEC/JPY">ZEC/JPY</option>
+           <option value = "ZEC/USD">ZEC/USD</option>
+      </select>
+    </div>
+    <div id="graphs">
+      <div id="bidsGraph"> </div>
+      <div id="asksGraph"> </div>
+    </div>
+    <script src="javascript/create_graph.js"></script>
+  </body>
+</html>
