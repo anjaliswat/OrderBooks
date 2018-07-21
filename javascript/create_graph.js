@@ -1,10 +1,5 @@
 var xmlHttp = new XMLHttpRequest();
 
-function setExchangeNames(name) {
-  this.name = name;
-  this.y = [];
-}
-
 function requestData(symbol) {
   xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -12,12 +7,12 @@ function requestData(symbol) {
       createGraph(data);
     }
   };
-  xmlHttp.open( "GET", 'http://localhost:5002/server?params='+ symbol, true ); // false for synchronous request
+  xmlHttp.open( "GET", 'http://localhost:5002/server?params='+ symbol, true );
   xmlHttp.send();
 }
 
 function fetchSymbol() {
-  xmlHttp.open( "GET", 'http://localhost:5002/server', false ); // false for synchronous request
+  xmlHttp.open( "GET", 'http://localhost:5002/server', false );
   xmlHttp.send();
   var symbol = JSON.parse(xmlHttp.response);
   return symbol
@@ -93,8 +88,12 @@ function createGraph(data) {
      x: {
          tick: {
              count: 4,
-         }
-     }
+         },
+         label: 'Symbols Price'
+     },
+     y: {
+          label: 'Asks Price'
+        },
     },
     point: {
       show: false
@@ -116,8 +115,12 @@ function createGraph(data) {
      x: {
          tick: {
              count: 4,
-         }
-     }
+         },
+         label: 'Symbols Price'
+     },
+     y: {
+          label: 'Bids Price'
+        },
     },
     point: {
       show: false

@@ -50,7 +50,7 @@ class Polling:
 
 startpolling = Polling()
 
-class S(Resource):
+class Server(Resource):
 
     def get(self):
         parser = reqparse.RequestParser()
@@ -66,7 +66,7 @@ class S(Resource):
             symbols = startpolling.getSymbol(access_token)
             return symbols
 
-api.add_resource(S,'/server')
+api.add_resource(Server,'/server')
 
 if __name__ == '__main__':
      app.run(port='5002')
